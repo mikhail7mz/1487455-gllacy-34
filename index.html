@@ -10,7 +10,106 @@
   <body class="theme-pink">
     <h1 class="visually-hidden">Магазин Глейси.</h1>
     <header class="header">
-
+      <nav class="navigation">
+        <a class="logo" href="#">
+          <span class="visually-hidden">Переход на главную.</span>
+          <img src="" alt="Логотип.">
+        </a>
+        <ul class="menu">
+          <li class="menu__item">
+            <button class="menu__link" type="button">Каталог</button>
+            <ul class="menu__sublist">
+              <li class="menu__sublist-item">
+                <a class="menu__sublist-link" href="#">Новинки</a>
+                <hr>
+              </li>
+              <li class="menu__sublist-item">
+                <a class="menu__sublist-link" href="#">Сливочное</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a class="menu__sublist-link" href="#">Щербеты</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a class="menu__sublist-link" href="#">Фруктовый лед</a>
+              </li>
+              <li class="menu__sublist-item">
+                <a class="menu__sublist-link" href="#">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О компании</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="tel:+78005558628">+7 800 555-86-28</a>
+      <div class="dropdown">
+        <button class="dropdown__button" type="button">
+          <span class="visually-hidden">Открыть форму поиска.</span>
+        </button>
+        <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="get">
+          <label>
+            <span class="visually-hiden">Поиск.</span>
+            <input class="dropdown__input" type="text">
+          </label>
+        </form>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown__button" type="button">Вход</button>
+        <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="post">
+          <h2>Личный кабинет</h2>
+          <label>
+            <span class="visually-hidden">E-mail.</span>
+            <input type="email" name="email" placeholder="E-mail" value="email@example.com">
+          </label>
+          <label>
+            <span class="visually-hidden">Пароль.</span>
+            <input type="password" name="password" placeholder="Пароль" value="123456">
+          </label>
+          <button class="button button_red" type="button">Войти</button>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Регистрация</a>
+        </form>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown__button" type="button">2 товара</button>
+        <form class="dropdown__content cart">
+          <h2>Корзина</h2>
+          <ul class="cart__list">
+            <li class="cart__item">
+              <a class="cart__link" href="#">
+                <div class="cart__product">
+                  <h3 class="cart__product-name"></h3>
+                  <p class="cart__product-quantity"></p>
+                </div>
+                <p class="cart__product-price"></p>
+                <img class="cart__product-image" src="#" alt="">
+              </a>
+              <button class="cart__button-delete">
+                <span class="visually-hidden">Удалить.</span>
+              </button>
+            </li>
+            <li class="cart__item">
+              <a class="cart__link" href="#">
+                <div class="cart__product">
+                  <h3 class="cart__product-name"></h3>
+                  <p class="cart__product-quantity"></p>
+                </div>
+                <p class="cart__product-price"></p>
+                <img class="cart__product-image" src="#" alt="">
+              </a>
+              <button class="cart__button-delete">
+                <span class="visually-hidden">Удалить.</span>
+              </button>
+            </li>
+          </ul>
+          <a class="cart__submit button button_red" type="button" href="#">Оформить заказ</button>
+          <span class="cart__total-price">Итого: 790 ₽</span>
+        </form>
+      </div>
     </header>
     <main class="main">
       <section class="recommended-products slider">
