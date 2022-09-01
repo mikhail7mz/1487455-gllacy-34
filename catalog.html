@@ -8,16 +8,16 @@
     <title>Магазин Глейси</title>
   </head>
   <body class="theme-pink">
-    <h1 class="visually-hidden">Магазин Глейси.</h1>
+    <h1 class="visually-hidden">Каталог товаров.</h1>
     <header class="header">
       <nav class="navigation">
-        <a class="logo" href="#">
+        <a class="logo" href="index.html">
           <span class="visually-hidden">Переход на главную.</span>
-          <img src="" alt="Логотип.">
+          <img src="#" alt="Логотип.">
         </a>
         <ul class="menu">
           <li class="menu__item">
-            <button class="menu__link" type="button">Каталог</button>
+            <button class="menu__link current" type="button">Каталог</button>
             <ul class="menu__sublist">
               <li class="menu__sublist-item">
                 <a class="menu__sublist-link" href="#">Новинки</a>
@@ -82,10 +82,10 @@
             <li class="cart__item">
               <a class="cart__link" href="#">
                 <div class="cart__product">
-                  <h3 class="cart__product-name"></h3>
-                  <p class="cart__product-quantity"></p>
+                  <h3 class="cart__product-name">Малинка</h3>
+                  <p class="cart__product-quantity">1 кг х 310 ₽</p>
                 </div>
-                <p class="cart__product-price"></p>
+                <p class="cart__product-price">310 ₽</p>
                 <img class="cart__product-image" src="#" alt="">
               </a>
               <button class="cart__button-delete">
@@ -95,10 +95,10 @@
             <li class="cart__item">
               <a class="cart__link" href="#">
                 <div class="cart__product">
-                  <h3 class="cart__product-name"></h3>
-                  <p class="cart__product-quantity"></p>
+                  <h3 class="cart__product-name">Бабл-гам</h3>
+                  <p class="cart__product-quantity">1,5 кг х 320 ₽</p>
                 </div>
-                <p class="cart__product-price"></p>
+                <p class="cart__product-price">480 ₽</p>
                 <img class="cart__product-image" src="#" alt="">
               </a>
               <button class="cart__button-delete">
@@ -106,13 +106,215 @@
               </button>
             </li>
           </ul>
-          <a class="cart__submit button button_red" type="button" href="#">Оформить заказ</button>
+          <button class="cart__submit button button_red" type="button">Оформить заказ</button>
           <span class="cart__total-price">Итого: 790 ₽</span>
         </form>
       </div>
     </header>
     <main class="main">
-
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item current">
+          <a class="breadcrumbs__link">Каталог</a>
+        </li>
+      </ul>
+      <h2>Сливочное мороженое</h2>
+      <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="filter__field-group">
+          <legend class="filter__legend">Сортировка:</legend>
+          <select aria-label="Сортировка">
+            <option value="popular" selected>по популярности</option>
+            <option value="cheap">сначала дешёвые</option>
+            <option value="expensive">сначала дорогие</option>
+          </select>
+        </fieldset>
+        <fieldset class="filter__field-group">
+          <legend class="filter__legend">Цена: 100 ₽ – 500 ₽</legend>
+          <div class="range-double">
+            <div class="range-double__interval">
+              <button class="range-double__toogle" type="button">
+                <span class="visually-hidden">Изменить минимальную цену.</span>
+              </button>
+              <button class="range-double__toogle" type="button">
+                <span class="visually-hidden">Изменить максимальную цену.</span>
+              </button>
+            </div>
+            <input class="visually-hidden" type="number" name="price-min" min="0" max="800" step="1" value="100">
+            <input class="visually-hidden" type="number" name="price-max" min="0" max="800" step="1" value="500">
+          </div>
+        </fieldset>
+        <fieldset class="filter__field-group">
+          <legend class="filter__legend">Жирность:</legend>
+          <label>
+            <input type="radio" name="fat-content" value="0">
+            <span>0%</span>
+          </label>
+          <label>
+            <input type="radio" name="fat-content" value="less 10" checked>
+            <span>до 10%</span>
+          </label>
+          <label>
+            <input type="radio" name="fat-content" value="less 30">
+            <span>до 30%</span>
+          </label>
+          <label>
+            <input type="radio" name="fat-content" value="more 30">
+            <span>выше 30%</span>
+          </label>
+        </fieldset>
+        <fieldset class="filter__field-group">
+          <legend class="filter__legend">Наполнители:</legend>
+          <label>
+            <input type="checkbox" name="filler" value="chocolate" checked>
+            <span>шоколадные</span>
+          </label>
+          <label>
+            <input type="checkbox" name="filler" value="sugar-sprinkles" checked>
+            <span>сахарные посыпки</span>
+          </label>
+          <label>
+            <input type="checkbox" name="filler" value="fruits">
+            <span>фрукты</span>
+          </label>
+          <label>
+            <input type="checkbox" name="filler" value="syrups">
+            <span>сиропы</span>
+          </label>
+          <label>
+            <input type="checkbox" name="filler" value="jams">
+            <span>джемы</span>
+          </label>
+        </fieldset>
+        <button type="submit">Применить</button>
+      </form>
+      <ul class="products">
+        <li class="products__item">
+          <h3 class="products__title">Малинка</h3>
+          <p class="products__description">Сливочное мороженое с малиновым джемом</p>
+          <p class="products__price">310 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Фисташка</h3>
+          <p class="products__description">Фисташковый пломбир с кусочками шоколада</p>
+          <p class="products__price">340 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Черника</h3>
+          <p class="products__description">Крем-брюле с черничным джемом</p>
+          <p class="products__price">330 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Бабл-гам</h3>
+          <p class="products__description">Ванильный пломбир со сладкой посыпкой</p>
+          <p class="products__price">320 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Ежевика</h3>
+          <p class="products__description">Сливочное мороженое с ежевичным джемом</p>
+          <p class="products__price">330 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Банан</h3>
+          <p class="products__description">Сливочный пломбир с банановым вкусом</p>
+          <p class="products__price">340 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Шоколадка</h3>
+          <p class="products__description">Классический шоколадный пломбир</p>
+          <p class="products__price">270 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Клубничка</h3>
+          <p class="products__description">Сливочный пломбир с клубничным вкусом</p>
+          <p class="products__price">300 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Лимон</h3>
+          <p class="products__description">Освежающий лимонный сорбет</p>
+          <p class="products__price">310 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Ментол</h3>
+          <p class="products__description">Сливочный пломбир с ментоловым сиропом</p>
+          <p class="products__price">320 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Орешек</h3>
+          <p class="products__description">Фисташковый пломбир с шоколадным сиропом</p>
+          <p class="products__price">360 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title">Крем-брюле</h3>
+          <p class="products__description">Классическое крем-брюле</p>
+          <p class="products__price">280 ₽/кг</p>
+          <button class="products__button" type="button">
+            <span class="visually-hidden">Добавить в корзину.</span>
+          </button>
+        </li>
+      </ul>
+      <div class="more-items">
+        <button type="button">Показать еще</button>
+        <div class="pagination">
+          <button class="pagination__toogle" type="button">
+            <span class="visually-hidden">Предыдущая.</span>
+          </button>
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item current">
+              <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">4</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">5</a>
+            </li>
+          </ul>
+          <button class="pagination__toogle" type="button">
+            <span class="visually-hidden">Следующая.</span>
+          </button>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <ul class="social">
