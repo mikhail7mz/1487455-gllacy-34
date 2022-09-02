@@ -17,8 +17,8 @@
         </a>
         <ul class="menu">
           <li class="menu__item">
-            <button class="menu__link current" type="button">Каталог</button>
-            <ul class="menu__sublist">
+            <button class="menu__link js-dropdown-button current" type="button">Каталог</button>
+            <ul class="menu__sublist js-dropdown-content">
               <li class="menu__sublist-item">
                 <a class="menu__sublist-link" href="#">Новинки</a>
                 <hr>
@@ -45,39 +45,39 @@
           </li>
         </ul>
       </nav>
-      <a href="tel:+78005558628">+7 800 555-86-28</a>
+      <a class="header__phone" href="tel:+78005558628">+7 800 555-86-28</a>
       <div class="dropdown">
-        <button class="dropdown__button" type="button">
+        <button class="dropdown__button dropdown__button_search js-dropdown-button" type="button">
           <span class="visually-hidden">Открыть форму поиска.</span>
         </button>
-        <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="get">
-          <label>
-            <span class="visually-hiden">Поиск.</span>
-            <input class="dropdown__input" type="text" name="search">
+        <form class="dropdown__content dropdown__content_small js-dropdown-content" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="dropdown__label">
+            <span class="visually-hidden">Поиск.</span>
+            <input class="dropdown__input input" type="text" name="search" placeholder="Поиск по сайту">
           </label>
         </form>
       </div>
       <div class="dropdown">
-        <button class="dropdown__button" type="button">Вход</button>
-        <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="post">
-          <h2>Личный кабинет</h2>
-          <label>
+        <button class="dropdown__button js-dropdown-button" type="button">Вход</button>
+        <form class="dropdown__content js-dropdown-content" action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="dropdown__title">Личный кабинет</h2>
+          <label class="dropdown__label">
             <span class="visually-hidden">E-mail.</span>
-            <input type="email" name="email" placeholder="E-mail" value="email@example.com">
+            <input class="dropdown__input input" type="email" name="email" placeholder="E-mail" value="email@example.com">
           </label>
-          <label>
+          <label class="dropdown__label">
             <span class="visually-hidden">Пароль.</span>
-            <input type="password" name="password" placeholder="Пароль" value="123456">
+            <input class="dropdown__input input" type="password" name="password" placeholder="Пароль" value="123456">
           </label>
           <button class="button button_red" type="button">Войти</button>
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Регистрация</a>
+          <a class="dropdown__link" href="#">Забыли пароль?</a>
+          <a class="dropdown__link" href="#">Регистрация</a>
         </form>
       </div>
       <div class="dropdown">
-        <button class="dropdown__button" type="button">2 товара</button>
-        <form class="dropdown__content cart">
-          <h2>Корзина</h2>
+        <button class="dropdown__button js-dropdown-button" type="button">2 товара</button>
+        <form class="dropdown__content cart js-dropdown-content">
+          <h2 class="dropdown__title">Корзина</h2>
           <ul class="cart__list">
             <li class="cart__item">
               <a class="cart__link" href="#">
@@ -356,5 +356,7 @@
         <p>Сделано в <a href="https://htmlacademy.ru/">.html academy</a> &copy; 2021</p>
       </div>
     </footer>
+
+    <script src="scripts/dropdown.js"></script>
   </body>
 </html>
