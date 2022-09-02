@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-400.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-700.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2");
+  font-display: swap;
+}
+
+:root {
+  --gray-extra-dark: #2d3440;
+  --gray-dark: #565C66;
+  --gray-neutral: #B9B9B9;
+  --gray-light: #E7E7E7;
+  --gray-extra-light: #FCFCFC;
+  --white: #FFFFFF;
+
+  --pink-extra-bright: #FF2F64;
+  --pink-bright: #FF4A78;
+  --pink-neutral: #FF7799;
+  --pink-light: #FEAFC3;
+  --pink-extra-light: #FFCBD8;
+
+  --blue: #69A9FF;
+  --yellow: #FCC850;
+
+  --color-error: #ea5454;
+  --color-warning: #fd912e;
+  --color-success: #00e484;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font: 16px/22px "Inter", Arial, Tahoma, sans-serif;
+  color: var(--gray-extra-dark);
+}
+
+.theme-pink {
+  background-color: var(--pink-light);
+}
+
+.theme-blue {
+  background-color: var(--blue);
+}
+
+.theme-yellow {
+  background-color: var(--yellow);
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 98px;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  color: inherit;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: inherit;
+}
+
+.caption {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+}
