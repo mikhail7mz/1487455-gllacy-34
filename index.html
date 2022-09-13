@@ -49,6 +49,9 @@
       <div class="dropdown">
         <button class="dropdown__button dropdown__button_search js-dropdown-button" type="button">
           <span class="visually-hidden">Открыть форму поиска.</span>
+          <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#search"/>
+          </svg>
         </button>
         <form class="dropdown__content dropdown__content_small js-dropdown-content" action="https://echo.htmlacademy.ru/" method="get">
           <label class="dropdown__label">
@@ -58,7 +61,12 @@
         </form>
       </div>
       <div class="dropdown">
-        <button class="dropdown__button js-dropdown-button" type="button">Вход</button>
+        <button class="dropdown__button js-dropdown-button" type="button">
+          <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#log-in"/>
+          </svg>
+          <span>Вход</span>
+        </button>
         <form class="dropdown__content js-dropdown-content" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="dropdown__title">Личный кабинет</h2>
           <label class="dropdown__label">
@@ -69,13 +77,22 @@
             <span class="visually-hidden">Пароль.</span>
             <input class="dropdown__input input" type="password" name="password" placeholder="Пароль" value="123456">
           </label>
-          <button class="button button_red" type="button">Войти</button>
-          <a class="dropdown__link" href="#">Забыли пароль?</a>
-          <a class="dropdown__link" href="#">Регистрация</a>
+          <div class="dropdown__flexcolumns">
+            <button class="button button_red" type="button">Войти</button>
+            <div>
+              <a class="dropdown__link" href="#">Забыли пароль?</a>
+              <a class="dropdown__link" href="#">Регистрация</a>
+            </div>
+          </div>
         </form>
       </div>
       <div class="dropdown">
-        <button class="dropdown__button js-dropdown-button" type="button">2 товара</button>
+        <button class="dropdown__button js-dropdown-button" type="button">
+          <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#cart"/>
+          </svg>
+          <span>2 товара</span>
+        </button>
         <form class="dropdown__content cart js-dropdown-content">
           <h2 class="dropdown__title">Корзина</h2>
           <ul class="cart__list">
@@ -106,45 +123,48 @@
               </button>
             </li>
           </ul>
-          <button class="cart__submit button button_red" type="button">Оформить заказ</button>
-          <span class="cart__total-price">Итого: 790 ₽</span>
+          <div class="dropdown__flexcolumns dropdown__flexcolumns_extended">
+            <button class="cart__submit button button_red" type="button">Оформить заказ</button>
+            <span class="cart__total-price">Итого: 790 ₽</span>
+          </div>
         </form>
       </div>
     </header>
     <main class="main container">
       <section class="recommended-products slider">
         <h2 class="visually-hidden">Рекомендуем попробовать.</h2>
-        <section class="slider__slide">
-          <div class="slider__content">
-            <h3 class="slider__title">Нежный пломбир с клубничным джемом</h3>
-            <p>Натуральное мороженое из свежих сливок
-              и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-            <a href="#">Заказать</a>
-          </div>
-          <div class="slider__image">
-            <img src="images/ice-creams/recommended/strawberry.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом.">
-          </div>
-        </section>
-        <section class="slider__slide">
-          <div class="slider__content">
-            <h3 class="slider__title">Сливочное мороженое со вкусом банана</h3>
-            <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-            <a href="#">Заказать</a>
-          </div>
-          <div class="slider__image">
-            <img src="images/ice-creams/recommended/banana.png" width="306" height="507" alt="Сливочное мороженое со вкусом банана.">
-          </div>
-        </section>
-        <section class="slider__slide">
-          <div class="slider__content">
-            <h3 class="slider__title">Карамельный пломбир с маршмеллоу</h3>
-            <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-            <a href="#">Заказать</a>
-          </div>
-          <div class="slider__image">
-            <img src="images/ice-creams/recommended/marshmallow.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу.">
-          </div>
-        </section>
+        <div class="slider__list">
+          <section class="slider__slide">
+            <div class="slider__content">
+              <h3 class="slider__title">Нежный пломбир <br>с клубничным джемом</h3>
+              <p>Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим клубничным джемом <br>– это идеальный десерт для всей семьи.</p>
+              <a class="slider_button button" href="#">Заказать</a>
+            </div>
+            <div class="slider__image-container">
+              <img class="slider__image" src="images/ice-creams/recommended/strawberry.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом.">
+            </div>
+          </section>
+          <section class="slider__slide">
+            <div class="slider__content">
+              <h3 class="slider__title">Сливочное мороженое со вкусом банана</h3>
+              <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+              <a class="slider_button button" href="#">Заказать</a>
+            </div>
+            <div class="slider__image-container">
+              <img class="slider__image" src="images/ice-creams/recommended/banana.png" width="306" height="507" alt="Сливочное мороженое со вкусом банана.">
+            </div>
+          </section>
+          <section class="slider__slide">
+            <div class="slider__content">
+              <h3 class="slider__title">Карамельный пломбир с маршмеллоу</h3>
+              <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+              <a class="slider_button button" href="#">Заказать</a>
+            </div>
+            <div class="slider__image-container">
+              <img class="slider__image" src="images/ice-creams/recommended/marshmallow.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу.">
+            </div>
+          </section>
+        </div>
         <div class="slider__navigation">
           <button class="slider__toogle slider__toogle-prev" type="button">
             <span class="visually-hidden">Предыдущий.</span>
@@ -155,7 +175,7 @@
         </div>
         <footer class="slider__footer">
           <div class="slider__pagination">
-            <button class="slider__pagination-item">
+            <button class="slider__pagination-item current">
               <span class="visually-hidden">Слайд 1.</span>
             </button>
             <button class="slider__pagination-item">
@@ -167,17 +187,17 @@
           </div>
           <ul class="social">
             <li class="social__item">
-              <a href="https://t.me/htmlacademy" class="social__link">
+              <a class="social__link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Перейти в телеграм.</span>
               </a>
             </li>
             <li class="social__item">
-              <a href="https://vk.com/htmlacademy" class="social__link">
+              <a class="social__link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Перейти в вконтакте.</span>
               </a>
             </li>
             <li class="social__item">
-              <a href="https://www.youtube.com/user/htmlacademyru" class="social__link">
+              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Перейти в ютюб.</span>
               </a>
             </li>
