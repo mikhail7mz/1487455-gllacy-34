@@ -309,12 +309,14 @@
         <h2 class="visually-hidden">Подписка на блог.</h2>
         <div class="blog-subscription__article">
           <h3 class="blog-subscription__article-title">Новое в нашем блоге</h3>
-          <p>10 способов сервировки фруктовых щербетов к столу</p>
+          <p class="blog-subscription__article-text title">10 способов сервировки фруктовых щербетов <br>к столу</p>
         </div>
         <form class="blog-subscription__form" action="https://echo.htmlacademy.ru/" method="post">
-          <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <input type="email" name="email" placeholder="email@example.com">
-          <button type="submit">Отправить</button>
+          <div class="blog-subscription__form-content">
+            <p class="blog-subscription__form-text">Подпишитесь на нашу сладкую рассылку и будьте всегда <br>в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <input class="blog-subscription__form-input input" type="email" name="email" placeholder="email@example.com">
+            <button class="blog-subscription__form-button button button_red" type="submit">Отправить</button>
+          </div>
         </form>
       </section>
       <section class="delivery">

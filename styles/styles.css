@@ -926,7 +926,7 @@ body {
 }
 
 .about-us {
-  background: url("../images/waffle-background.jpg") repeat;
+  background: var(--pink-neutral) url("../images/waffle-background.jpg") repeat;
   margin-bottom: 80px;
   padding: 24px;
   border-radius: 16px;
@@ -982,6 +982,64 @@ body {
 
 .about-us__text_thermometer::before {
   background-image: url("../images/icons/thermometer.svg");
+}
+
+.blog-subscription {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.blog-subscription__article {
+  padding: 32px;
+  padding-right: 235px;
+  border-radius: 16px;
+  background: var(--white) url("../images/news.jpg") no-repeat top right;
+}
+
+.blog-subscription__article-title {
+  margin: 0;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--gray-dark);
+}
+
+.blog-subscription__article-text {
+  margin: 0;
+}
+
+.blog-subscription__form {
+  padding: 6px;
+  border-radius: 16px;
+  background: url("../images/news-form-background.jpg") repeat-y;
+}
+
+.blog-subscription__form-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 26px;
+  padding-bottom: 28px;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+.blog-subscription__form-text {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 44px;
+  color: var(--gray-dark);
+}
+
+.blog-subscription__form-input {
+  flex-grow: 1;
+  margin-right: 19px;
+}
+
+.blog-subscription__form-button {
+  align-self: center;
+  margin-right: 0;
 }
 
 .social {
