@@ -91,6 +91,7 @@ body {
 }
 
 .heading {
+  margin: 0;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
@@ -99,6 +100,7 @@ body {
 }
 
 .title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -106,6 +108,7 @@ body {
 }
 
 .caption {
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -267,6 +270,7 @@ body {
 
 .menu__item {
   position: relative;
+  z-index: 2;
 }
 
 .menu__link {
@@ -433,6 +437,7 @@ body {
 .dropdown__content {
   position: absolute;
   right: 0;
+  z-index: 2;
   display: none;
   margin-top: 8px;
   padding: 53px 48px 48px 48px;
@@ -572,6 +577,10 @@ body {
   opacity: 0.3;
 }
 
+.recommended-products {
+  margin-bottom: 81px;
+}
+
 .slider {
   position: relative;
 }
@@ -658,6 +667,8 @@ body {
 .slider__footer {
   display: flex;
   justify-content: space-between;
+  align-items: end;
+  margin-top: 2px;
 }
 
 .slider__toogle {
@@ -784,6 +795,49 @@ body {
   color: inherit;
   text-decoration: none;
   background-clip: content-box;
+}
+
+.gifts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.gifts__heading {
+  grid-column: span 2;
+  margin-bottom: 24px;
+}
+
+.gifts__item {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 268px;
+  padding: 36px;
+  padding-right: 206px;
+  border-radius: 16px;
+  background-color: var(--pink-neutral);
+}
+
+.gifts__title {
+  margin-top: 1px;
+  margin-bottom: 27px;
+}
+
+.gifts__text {
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.gifts__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+}
+
+.gifts__button {
+  display: block;
+  max-width: max-content;
 }
 
 .social__icon {

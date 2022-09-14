@@ -220,18 +220,18 @@
         </footer>
       </section>
       <section class="gifts">
-        <h2 class="heading">Заказывайте мороженое и получайте подарки!</h2>
+        <h2 class="gifts__heading heading">Заказывайте мороженое <br>и получайте подарки!</h2>
         <article class="gifts__item">
-          <h3 class="gifts__title">Малинка даром!</h3>
-          <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <h3 class="gifts__title title">Малинка даром!</h3>
+          <p class="gifts__text">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <img class="gifts__image" src="images/gift-raspberry.png" width="219" height="268" alt="Вафельный рожок с малиной.">
-          <a href="#">Хочу подарок</a>
+          <a class="gifts__button button" href="#">Хочу подарок</a>
         </article>
         <article class="gifts__item">
-          <h3 class="gifts__title">Маршмеллоу даром!</h3>
-          <p>При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
+          <h3 class="gifts__title title">Маршмеллоу даром!</h3>
+          <p class="gifts__text">При покупке 2 кг пломбира добавим <br>в ваш заказ упаковку нежных <br>зефирок совершенно бесплатно.</p>
           <img class="gifts__image" src="images/gift-marshmallow.png" width="219" height="268" alt="Вафельный рожок с маршмеллоу.">
-          <a href="#">Хочу подарок</a>
+          <a class="gifts__button button" href="#">Хочу подарок</a>
         </article>
       </section>
       <section class="popular">
@@ -338,20 +338,29 @@
       </section>
     </main>
     <footer class="footer container">
-      <ul class="social">
+      <ul class="footer__social social">
         <li class="social__item">
-          <a href="https://t.me/htmlacademy" class="social__link">
+          <a class="social__link" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Перейти в телеграм.</span>
+            <svg class="social__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#telegram"/>
+            </svg>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://vk.com/htmlacademy" class="social__link">
+          <a class="social__link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Перейти в вконтакте.</span>
+            <svg class="social__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#vk"/>
+            </svg>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.youtube.com/user/htmlacademyru" class="social__link">
+          <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Перейти в ютюб.</span>
+            <svg class="social__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#youtube"/>
+            </svg>
           </a>
         </li>
       </ul>
