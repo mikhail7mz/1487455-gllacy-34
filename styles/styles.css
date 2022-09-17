@@ -1052,6 +1052,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 42px;
+  margin-bottom: 80px;
   padding: 64px;
   border-radius: 16px;
   background: var(--white) url("../images/delivery-background.jpg") no-repeat top right;
@@ -1172,6 +1173,43 @@ body {
 
 .tooltip__button:hover ~ .tooltip__content {
   display: block;
+}
+
+.contacts {
+  padding: 64px;
+  border-radius: 16px;
+  background: var(--gray-neutral) url("../images/contacts-background.jpg") no-repeat center top;
+}
+
+.contacts__content {
+  max-width: 263px;
+  padding: 40px;
+  border-radius: 8px;
+  background-color: var(--gray-extra-light);
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+}
+
+.contacts__text {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.contacts__text_small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__address {
+  margin-bottom: 24px;
+}
+
+.contacts__phone {
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.contacts__button {
+  margin-top: 16px;
 }
 
 .social {
