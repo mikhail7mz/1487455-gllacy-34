@@ -320,35 +320,37 @@
         </form>
       </section>
       <section class="delivery">
-        <h2>Доставка любимого мороженого на дом</h2>
-        <p>Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        <div class="delivery__content">
+          <h2 class="delivery__title heading">Доставка любимого мороженого на дом</h2>
+          <p class="delivery__text">Хочется полакомиться любимым десертом, <br>но нет времени съездить в магазин? Закажите <br>доставку мороженого на дом, и курьер <br>привезёт вам ваш заказ в течение часа!</p>
+        </div>
         <form class="delivery__form" action="https://echo.htmlacademy.ru/" method="post">
-          <p>Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-          <label>
-            <span>Дата</span>
-            <span class="tooltip">
+          <p class="delivery__form-description delivery__text">Укажите адрес и дату доставки, и мы свяжемся <br>с вами, чтобы подтвердить заказ.</p>
+          <label class="delivery__form-field">
+            <span class="delivery__form-label label tooltip">
+              <span>Дата</span>
               <button class="tooltip__button" type="button">
                 <span class="visually-hidden">Показать подсказку.</span>
               </button>
               <span class="tooltip__content">Опа! А тут пусто...</span>
             </span>
-            <input type="text" name="date" placeholder="01.04.2020">
+            <input class="delivery__form-input input" type="text" name="date" placeholder="01.04.2020">
           </label>
-          <label>
-            <span>Телефон</span>
-            <input type="tel" name="phone" placeholder="+7 800 999-00-00">
+          <label class="delivery__form-field delivery__form-field_double">
+            <span class="label">Телефон</span>
+            <input class="delivery__form-input input" type="tel" name="phone" placeholder="+7 800 999-00-00">
           </label>
-          <label>
-            <span>Адрес</span>
-            <span class="tooltip">
+          <label class="delivery__form-field delivery__form-field_big">
+            <span class="delivery__form-label label tooltip">
+              <span>Адрес</span>
               <button class="tooltip__button" type="button">
                 <span class="visually-hidden">Показать подсказку.</span>
               </button>
               <span class="tooltip__content">Введите название улицы, дома и квартиры</span>
             </span>
-            <input type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">
+            <input class="delivery__form-input input" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">
           </label>
-          <button type="submit">Отправить</button>
+          <button class="delivery__form-button button button_red" type="submit">Отправить</button>
         </form>
       </section>
       <section class="contacts">
