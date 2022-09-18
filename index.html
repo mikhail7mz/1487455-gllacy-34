@@ -105,7 +105,7 @@
                 <p class="cart__product-price">310 ₽</p>
                 <img class="cart__product-image" src="images/ice-creams/raspberry.jpg" width="46" height="46" alt="Шарик мороженного Малинка.">
               </a>
-              <button class="cart__button-delete">
+              <button class="button-delete">
                 <span class="visually-hidden">Удалить.</span>
               </button>
             </li>
@@ -118,7 +118,7 @@
                 <p class="cart__product-price">480 ₽</p>
                 <img class="cart__product-image" src="images/ice-creams/bubble-gum.jpg" width="46" height="46" alt="Шарик мороженного Бабл-гам.">
               </a>
-              <button class="cart__button-delete">
+              <button class="button-delete">
                 <span class="visually-hidden">Удалить.</span>
               </button>
             </li>
@@ -134,7 +134,7 @@
       <section class="recommended-products slider">
         <h2 class="visually-hidden">Рекомендуем попробовать.</h2>
         <div class="slider__list">
-          <section class="slider__slide">
+          <section class="slider__slide active">
             <div class="slider__content">
               <h3 class="slider__title">Нежный пломбир с&nbsp;клубничным джемом</h3>
               <p>Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом -&nbsp;это&nbsp;идеальный десерт для всей семьи.</p>
@@ -360,7 +360,7 @@
           <p class="contacts__text">Для заказов по телефону:</p>
           <a class="contacts__phone caption" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <p class="contacts__text contacts__text_small">(с 10 до 20 ежедневно)</p>
-          <button class="contacts__button button button_red" type="button">Форма обратной связи</button>
+          <button class="contacts__button button button_red js-modal-open" type="button" data-modal="feedback">Форма обратной связи</button>
         </div>
       </section>
     </main>
@@ -403,5 +403,27 @@
         <span>&copy; 2021</span>
       </div>
     </footer>
+    <div class="modal-overlay"></div>
+    <form class="feedback-form modal" action="https://echo.htmlacademy.ru/" method="post" data-modal="feedback">
+      <h2 class="feedback-form__title title">Мы обязательно ответим вам!</h2>
+      <label class="feedback-form__field">
+        <span class="visually-hidden">Имя и фамилия.</span>
+        <input class="feedback-form__input input" type="text" name="name" placeholder="Имя и фамилия">
+      </label>
+      <label class="feedback-form__field">
+        <span class="visually-hidden">email@example.com.</span>
+        <input class="feedback-form__input input" type="email" name="email" placeholder="email@example.com">
+      </label>
+      <label class="feedback-form__field">
+        <span class="visually-hidden">Текст сообщения.</span>
+        <textarea class="feedback-form__textarea textarea" name="message" cols="10" rows="5" placeholder="В свободной форме"></textarea>
+      </label>
+      <button class="feedback-form__button button button_red" type="submit">Отправить</button>
+      <button class="feedback-form__close button-close js-modal-close" type="button">
+        <span class="visually-hidden">Удалить.</span>
+      </button>
+    </form>
+
+    <script src="scripts/modal.js"></script>
   </body>
 </html>
