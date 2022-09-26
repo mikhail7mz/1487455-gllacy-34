@@ -6,45 +6,37 @@ const slidesAmount = slides.length;
 let currentIndex = 0;
 
 const onSlideChange = (index) => {
+  console.log(index);
   const activeSlide = document.querySelector('.slider__slide.active');
   const activeBullet = document.querySelector('.slider__pagination-item.active');
 
-  document.body.classList.remove('theme-pink');
-  document.body.classList.remove('theme-blue');
-  document.body.classList.remove('theme-yellow');
-  document.body.classList.add(`${slides[index].dataset.theme}`);
+  document.body.classList.forEach((currentClass) => {
+    if (currentClass.startsWith("theme-")) {
+      document.body.classList.remove(currentClass);
+    }
+  });
+
+  document.body.classList.add(`theme-${slides[index].dataset.theme}`);
+
   activeSlide.classList.remove('active');
   slides[index].classList.add('active');
+
   activeBullet.classList.remove('active');
   bullets[index].classList.add('active');
 };
 
-const onPrevButtonClick = (evt) => {
-  evt.preventDefault();
+buttonPrev.addEventListener('click', (e) => {
+  e.preventDefault();
   currentIndex--;
-
-  if (currentIndex < 0) {
-    currentIndex = slidesAmount - 1;
-  }
-
+  currentIndex = (currentIndex < 0) ? slidesAmount - 1 : currentIndex;
   onSlideChange(currentIndex);
-};
+});
 
-const onNextButtonClick = (evt) => {
-  evt.preventDefault();
+buttonNext.addEventListener('click', (e) => {
+  e.preventDefault();
   currentIndex++;
-
-  if (currentIndex === slidesAmount) {
-    currentIndex = 0;
-  }
-
+  currentIndex = (currentIndex === slidesAmount) ? 0 : currentIndex;
   onSlideChange(currentIndex);
-};
+});
 
-const initSlider = () => {
-  buttonPrev.addEventListener('click', onPrevButtonClick);
-  buttonNext.addEventListener('click', onNextButtonClick);
-  bullets.forEach((element, index) => element.addEventListener('click', () => onSlideChange(index)));
-};
-
-initSlider();
+bullets.forEach((element, index) => element.addEventListener('click', () => onSlideChange(index)));
