@@ -657,6 +657,7 @@ body {
   align-items: flex-start;
   gap: 41px;
   padding-top: 21px;
+  overflow-x: hidden;
 }
 
 .slider__slide {
