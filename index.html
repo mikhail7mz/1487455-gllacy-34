@@ -93,7 +93,7 @@
           </svg>
           <span>2 товара</span>
         </button>
-        <form class="dropdown__content cart js-dropdown-content">
+        <form class="dropdown__content cart js-dropdown-content" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="dropdown__title">Корзина</h2>
           <ul class="cart__list">
             <li class="cart__item">
@@ -105,7 +105,7 @@
                 <p class="cart__product-price">310 ₽</p>
                 <img class="cart__product-image" src="images/ice-creams/raspberry.jpg" width="46" height="46" alt="Шарик мороженного Малинка.">
               </a>
-              <button class="button-close">
+              <button class="button-close" type="button">
                 <span class="visually-hidden">Удалить.</span>
               </button>
             </li>
@@ -118,7 +118,7 @@
                 <p class="cart__product-price">480 ₽</p>
                 <img class="cart__product-image" src="images/ice-creams/bubble-gum.jpg" width="46" height="46" alt="Шарик мороженного Бабл-гам.">
               </a>
-              <button class="button-close">
+              <button class="button-close" type="button">
                 <span class="visually-hidden">Удалить.</span>
               </button>
             </li>
@@ -179,13 +179,13 @@
         </div>
         <footer class="slider__footer">
           <div class="slider__pagination">
-            <button class="slider__pagination-item active">
+            <button class="slider__pagination-item active" type="button">
               <span class="visually-hidden">Слайд 1.</span>
             </button>
-            <button class="slider__pagination-item">
+            <button class="slider__pagination-item" type="button">
               <span class="visually-hidden">Слайд 2.</span>
             </button>
-            <button class="slider__pagination-item">
+            <button class="slider__pagination-item" type="button">
               <span class="visually-hidden">Слайд 3.</span>
             </button>
           </div>
@@ -326,9 +326,9 @@
           <label class="delivery__form-field">
             <span class="delivery__form-label label tooltip">
               <span>Дата</span>
-              <button class="tooltip__button" type="button">
+              <span class="tooltip__button">
                 <span class="visually-hidden">Показать подсказку.</span>
-              </button>
+              </span>
               <span class="tooltip__content">Опа! А тут пусто...</span>
             </span>
             <input class="delivery__form-input input" type="text" name="date" placeholder="01.04.2020">
@@ -340,9 +340,9 @@
           <label class="delivery__form-field delivery__form-field_big">
             <span class="delivery__form-label label tooltip">
               <span>Адрес</span>
-              <button class="tooltip__button" type="button">
+              <span class="tooltip__button">
                 <span class="visually-hidden">Показать подсказку.</span>
-              </button>
+              </span>
               <span class="tooltip__content">Введите название улицы, дома и квартиры</span>
             </span>
             <input class="delivery__form-input input" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">

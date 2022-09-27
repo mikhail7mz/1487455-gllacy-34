@@ -6,7 +6,7 @@ const slidesAmount = slides.length;
 let currentIndex = 0;
 
 const onSlideChange = (index) => {
-  console.log(index);
+  currentIndex = index;
   const activeSlide = document.querySelector('.slider__slide.active');
   const activeBullet = document.querySelector('.slider__pagination-item.active');
 
