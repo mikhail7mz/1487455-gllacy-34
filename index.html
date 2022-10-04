@@ -15,10 +15,10 @@
           <span class="visually-hidden">Переход на главную.</span>
           <img src="images/logo.svg" width="137" height="56" alt="Логотип.">
         </a>
-        <ul class="menu">
-          <li class="menu__item">
-            <button class="menu__link js-dropdown-button" type="button">Каталог</button>
-            <ul class="menu__sublist js-dropdown-content">
+        <ul class="navigation__menu menu">
+          <li class="menu__item menu__item--dropdown">
+            <button class="menu__link" type="button">Каталог</button>
+            <ul class="menu__sublist">
               <li class="menu__sublist-item">
                 <a class="menu__sublist-link menu__sublist-link_bold" href="#">Новинки</a>
                 <hr class="menu__sublist-separator">
@@ -45,89 +45,91 @@
           </li>
         </ul>
       </nav>
-      <a class="header__phone" href="tel:+78005558628">+7 800 555-86-28</a>
-      <div class="dropdown">
-        <button class="dropdown__button dropdown__button_search js-dropdown-button" type="button">
-          <span class="visually-hidden">Открыть форму поиска.</span>
-          <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="images/icons/icons.svg#search"/>
-          </svg>
-        </button>
-        <form class="dropdown__content dropdown__content_small js-dropdown-content" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="dropdown__label">
-            <span class="visually-hidden">Поиск.</span>
-            <input class="dropdown__input input" type="text" name="search" placeholder="Поиск по сайту">
-          </label>
-        </form>
-      </div>
-      <div class="dropdown">
-        <button class="dropdown__button js-dropdown-button" type="button">
-          <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="images/icons/icons.svg#log-in"/>
-          </svg>
-          <span>Вход</span>
-        </button>
-        <form class="dropdown__content js-dropdown-content" action="https://echo.htmlacademy.ru/" method="post">
-          <h2 class="dropdown__title">Личный кабинет</h2>
-          <label class="dropdown__label">
-            <span class="visually-hidden">E-mail.</span>
-            <input class="dropdown__input input" type="email" name="email" placeholder="E-mail" value="email@example.com">
-          </label>
-          <label class="dropdown__label">
-            <span class="visually-hidden">Пароль.</span>
-            <input class="dropdown__input input" type="password" name="password" placeholder="Пароль" value="123456">
-          </label>
-          <div class="dropdown__flexcolumns">
-            <button class="button button_red" type="button">Войти</button>
-            <div>
-              <a class="dropdown__link" href="#">Забыли пароль?</a>
-              <a class="dropdown__link" href="#">Регистрация</a>
+      <div class="dropdown-group">
+        <a class="header__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+        <div class="dropdown">
+          <button class="dropdown__button dropdown__button--search" type="button">
+            <span class="visually-hidden">Открыть форму поиска.</span>
+            <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#search"/>
+            </svg>
+          </button>
+          <form class="dropdown__content dropdown__content--small" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="dropdown__label">
+              <span class="visually-hidden">Поиск.</span>
+              <input class="dropdown__input input" type="text" name="search" placeholder="Поиск по сайту">
+            </label>
+          </form>
+        </div>
+        <div class="dropdown">
+          <button class="dropdown__button" type="button">
+            <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#log-in"/>
+            </svg>
+            <span>Вход</span>
+          </button>
+          <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="post">
+            <h2 class="dropdown__title">Личный кабинет</h2>
+            <label class="dropdown__label">
+              <span class="visually-hidden">E-mail.</span>
+              <input class="dropdown__input input" type="email" name="email" placeholder="E-mail" value="email@example.com">
+            </label>
+            <label class="dropdown__label">
+              <span class="visually-hidden">Пароль.</span>
+              <input class="dropdown__input input" type="password" name="password" placeholder="Пароль" value="123456">
+            </label>
+            <div class="dropdown__flexcolumns">
+              <button class="button button_red" type="button">Войти</button>
+              <div>
+                <a class="dropdown__link" href="#">Забыли пароль?</a>
+                <a class="dropdown__link" href="#">Регистрация</a>
+              </div>
             </div>
-          </div>
-        </form>
-      </div>
-      <div class="dropdown">
-        <button class="dropdown__button js-dropdown-button" type="button">
-          <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="images/icons/icons.svg#cart"/>
-          </svg>
-          <span>2 товара</span>
-        </button>
-        <form class="dropdown__content cart js-dropdown-content" action="https://echo.htmlacademy.ru/" method="post">
-          <h2 class="dropdown__title">Корзина</h2>
-          <ul class="cart__list">
-            <li class="cart__item">
-              <a class="cart__link" href="#">
-                <div class="cart__product">
-                  <h3 class="cart__product-name">Малинка</h3>
-                  <p class="cart__product-quantity">1 кг х 310 ₽</p>
-                </div>
-                <p class="cart__product-price">310 ₽</p>
-                <img class="cart__product-image" src="images/ice-creams/raspberry.jpg" width="46" height="46" alt="Шарик мороженного Малинка.">
-              </a>
-              <button class="button-close" type="button">
-                <span class="visually-hidden">Удалить.</span>
-              </button>
-            </li>
-            <li class="cart__item">
-              <a class="cart__link" href="#">
-                <div class="cart__product">
-                  <h3 class="cart__product-name">Бабл-гам</h3>
-                  <p class="cart__product-quantity">1,5 кг х 320 ₽</p>
-                </div>
-                <p class="cart__product-price">480 ₽</p>
-                <img class="cart__product-image" src="images/ice-creams/bubble-gum.jpg" width="46" height="46" alt="Шарик мороженного Бабл-гам.">
-              </a>
-              <button class="button-close" type="button">
-                <span class="visually-hidden">Удалить.</span>
-              </button>
-            </li>
-          </ul>
-          <div class="dropdown__flexcolumns dropdown__flexcolumns_extended">
-            <button class="cart__submit button button_red" type="button">Оформить заказ</button>
-            <span class="cart__total-price">Итого: 790 ₽</span>
-          </div>
-        </form>
+          </form>
+        </div>
+        <div class="dropdown">
+          <button class="dropdown__button" type="button">
+            <svg class="dropdown__icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#cart"/>
+            </svg>
+            <span>2 товара</span>
+          </button>
+          <form class="dropdown__content cart" action="https://echo.htmlacademy.ru/" method="post">
+            <h2 class="dropdown__title">Корзина</h2>
+            <ul class="cart__list">
+              <li class="cart__item">
+                <a class="cart__link" href="#">
+                  <div class="cart__product">
+                    <h3 class="cart__product-name">Малинка</h3>
+                    <p class="cart__product-quantity">1 кг х 310 ₽</p>
+                  </div>
+                  <p class="cart__product-price">310 ₽</p>
+                  <img class="cart__product-image" src="images/ice-creams/raspberry.jpg" width="46" height="46" alt="Шарик мороженного Малинка.">
+                </a>
+                <button class="button-close" type="button">
+                  <span class="visually-hidden">Удалить.</span>
+                </button>
+              </li>
+              <li class="cart__item">
+                <a class="cart__link" href="#">
+                  <div class="cart__product">
+                    <h3 class="cart__product-name">Бабл-гам</h3>
+                    <p class="cart__product-quantity">1,5 кг х 320 ₽</p>
+                  </div>
+                  <p class="cart__product-price">480 ₽</p>
+                  <img class="cart__product-image" src="images/ice-creams/bubble-gum.jpg" width="46" height="46" alt="Шарик мороженного Бабл-гам.">
+                </a>
+                <button class="button-close" type="button">
+                  <span class="visually-hidden">Удалить.</span>
+                </button>
+              </li>
+            </ul>
+            <div class="dropdown__flexcolumns dropdown__flexcolumns--extended">
+              <button class="cart__submit button button_red" type="button">Оформить заказ</button>
+              <span class="cart__total-price">Итого: 790 ₽</span>
+            </div>
+          </form>
+        </div>
       </div>
     </header>
     <main class="main container">
@@ -138,7 +140,7 @@
             <div class="slider__content">
               <h3 class="slider__title">Нежный пломбир с&nbsp;клубничным джемом</h3>
               <p>Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом -&nbsp;это&nbsp;идеальный десерт для всей семьи.</p>
-              <a class="slider_button button" href="#">Заказать</a>
+              <a class="slider__button button" href="#">Заказать</a>
             </div>
             <div class="slider__image-container">
               <img class="slider__image" src="images/ice-creams/recommended/strawberry.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом.">
@@ -148,7 +150,7 @@
             <div class="slider__content">
               <h3 class="slider__title">Сливочное мороженое со вкусом банана</h3>
               <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-              <a class="slider_button button" href="#">Заказать</a>
+              <a class="slider__button button" href="#">Заказать</a>
             </div>
             <div class="slider__image-container">
               <img class="slider__image" src="images/ice-creams/recommended/banana.png" width="306" height="507" alt="Сливочное мороженое со вкусом банана.">
@@ -158,21 +160,21 @@
             <div class="slider__content">
               <h3 class="slider__title">Карамельный пломбир с маршмеллоу</h3>
               <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-              <a class="slider_button button" href="#">Заказать</a>
+              <a class="slider__button button" href="#">Заказать</a>
             </div>
             <div class="slider__image-container">
               <img class="slider__image" src="images/ice-creams/recommended/marshmallow.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу.">
             </div>
           </section>
-          <button class="slider__toogle slider__toogle-prev" type="button">
+          <button class="slider__toggle slider__toggle-prev" type="button">
             <span class="visually-hidden">Предыдущий.</span>
-            <svg class="slider__toogle-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <svg class="slider__toggle-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="images/icons/icons.svg#arrow"/>
             </svg>
           </button>
-          <button class="slider__toogle slider__toogle-next" type="button">
+          <button class="slider__toggle slider__toggle-next" type="button">
             <span class="visually-hidden">Следующий.</span>
-            <svg class="slider__toogle-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <svg class="slider__toggle-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="images/icons/icons.svg#arrow"/>
             </svg>
           </button>
@@ -297,10 +299,10 @@
         <div class="about-us__content">
           <h2 class="visually-hidden">О нас.</h2>
           <p class="about-us__title heading">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-          <p class="about-us__text about-us__text_ice-cream">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
-          <p class="about-us__text about-us__text_cow">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств, с которыми нас&nbsp;связывает долговременное сотрудничество.</p>
-          <p class="about-us__text about-us__text_leaf">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и&nbsp;добавки произведены из натурального сырья.</p>
-          <p class="about-us__text about-us__text_thermometer">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
+          <p class="about-us__text about-us__text--ice-cream">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
+          <p class="about-us__text about-us__text--cow">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств, с которыми нас&nbsp;связывает долговременное сотрудничество.</p>
+          <p class="about-us__text about-us__text--leaf">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и&nbsp;добавки произведены из натурального сырья.</p>
+          <p class="about-us__text about-us__text--thermometer">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
         </div>
       </section>
       <div class="blog-subscription">
@@ -311,6 +313,7 @@
         <form class="blog-subscription__form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="blog-subscription__form-content">
             <p class="blog-subscription__form-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <!-- чтобы задать стили поля с ошибкой необходимо повесить класс is_error -->
             <input class="blog-subscription__form-input input" type="email" name="email" placeholder="email@example.com">
             <button class="blog-subscription__form-button button button_red" type="submit">Отправить</button>
           </div>
@@ -331,10 +334,12 @@
               </span>
               <span class="tooltip__content">Опа! А тут пусто...</span>
             </span>
+            <!-- чтобы задать стили поля с ошибкой необходимо повесить класс is_error -->
             <input class="delivery__form-input input" type="text" name="date" placeholder="01.04.2020">
           </label>
           <label class="delivery__form-field delivery__form-field_double">
             <span class="label">Телефон</span>
+            <!-- чтобы задать стили поля с ошибкой необходимо повесить класс is_error -->
             <input class="delivery__form-input input" type="tel" name="phone" placeholder="+7 800 999-00-00">
           </label>
           <label class="delivery__form-field delivery__form-field_big">
@@ -345,6 +350,7 @@
               </span>
               <span class="tooltip__content">Введите название улицы, дома и квартиры</span>
             </span>
+            <!-- чтобы задать стили поля с ошибкой необходимо повесить класс is_error -->
             <input class="delivery__form-input input" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">
           </label>
           <button class="delivery__form-button button button_red" type="submit">Отправить</button>
@@ -357,7 +363,7 @@
           <p class="contacts__text contacts__address caption">наб. реки Карповки, 5&nbsp;лит&nbsp;П, Санкт-Петербург</p>
           <p class="contacts__text">Для заказов по телефону:</p>
           <a class="contacts__phone caption" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          <p class="contacts__text contacts__text_small">(с 10 до 20 ежедневно)</p>
+          <p class="contacts__text contacts__text--small">(с 10 до 20 ежедневно)</p>
           <button class="contacts__button button button_red js-modal-open" type="button" data-modal="feedback">Форма обратной связи</button>
         </div>
       </section>
@@ -403,6 +409,7 @@
     </footer>
     <div class="modal-overlay"></div>
     <form class="feedback-form modal" action="https://echo.htmlacademy.ru/" method="post" data-modal="feedback">
+      <!-- чтобы задать стили поля с ошибкой необходимо повесить на input класс is_error -->
       <h2 class="feedback-form__title title">Мы обязательно ответим вам!</h2>
       <label class="feedback-form__field">
         <span class="visually-hidden">Имя и фамилия.</span>
