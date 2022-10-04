@@ -1408,7 +1408,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--gray-extra-dark);
+  background-color: var(--gray-extra-dark);
 }
 
 .modal {
@@ -1564,11 +1564,11 @@ body {
   background-position: center center;
 }
 
-.pagination__toggle_prev {
+.pagination__toggle--prev {
   transform: rotate(90deg);
 }
 
-.pagination__toggle_next {
+.pagination__toggle--next {
   transform: rotate(-90deg);
 }
 
